@@ -1,0 +1,2 @@
+../Core/Src/rls_estimator.c:12:6:RLS_Init	32	static
+../Core/Src/rls_estimator.c:29:6:RLS_Update	120	static
