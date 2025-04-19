@@ -106,8 +106,6 @@ KalmanFilter vel_filter;
 RLS_Estimator estimator;
 volatile uint16_t ouput_duty;
 volatile float32_t a[4];
-//something else
-
 /* USER CODE END 0 */
 
 /**
@@ -175,15 +173,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  	 	volatile float estimsteIn = (float)pid.output;
-	  		volatile float estimsteOut = (float)motor_omega;
-	  		RLS_Update(&estimator, estimsteIn, estimsteOut);
-	  		a[0] = estimator.Theta_.pData[0];
-	  		a[1] = estimator.Theta_.pData[1];
-	  		a[2] = estimator.Theta_.pData[2];
-	  		a[3] = estimator.Theta_.pData[3];
-	  		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
-	  		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, u_motor);
+//	  	 	volatile float estimsteIn = (float)pid.output;
+//	  		volatile float estimsteOut = (float)motor_omega;
+//	  		RLS_Update(&estimator, estimsteIn, estimsteOut);
+//	  		a[0] = estimator.Theta_.pData[0];
+//	  		a[1] = estimator.Theta_.pData[1];
+//	  		a[2] = estimator.Theta_.pData[2];
+//	  		a[3] = estimator.Theta_.pData[3];
+//	  		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+//	  		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, u_motor);
   }
   /* USER CODE END 3 */
 }
