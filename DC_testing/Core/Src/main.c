@@ -106,6 +106,7 @@ KalmanFilter vel_filter;
 RLS_Estimator estimator;
 volatile uint16_t ouput_duty;
 volatile float32_t a[4];
+//something else
 
 /* USER CODE END 0 */
 
